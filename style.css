@@ -1528,3 +1528,132 @@ footer {
         max-width: 100%;
     }
 }
+
+/* ── FAQ ── */
+.faq {
+    padding: 5rem 4rem;
+    background: #fdfbf8;
+}
+.faq-wrap {
+    max-width: 800px;
+    margin: 3.5rem auto 0;
+}
+.faq-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.faq-q {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+.faq-q:hover {
+    color: var(--teal);
+}
+.faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #777;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-weight: 300;
+}
+.faq-item.active .faq-a {
+    max-height: 200px;
+    padding-bottom: 1.5rem;
+}
+.faq-icon {
+    font-size: 1.2rem;
+    transition: transform 0.4s;
+    color: var(--gold);
+}
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* ── MAP ── */
+#map {
+    padding: 5rem 4rem;
+    background: #fff;
+}
+.map-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* ── PRELOADER ── */
+.preloader {
+    position: fixed;
+    inset: 0;
+    background: var(--dark);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.6s, visibility 0.6s;
+}
+.preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+.loader-content {
+    text-align: center;
+}
+.loader-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.2em;
+    margin-bottom: 1.5rem;
+}
+.loader-logo span {
+    color: var(--gold);
+}
+.loader-bar {
+    width: 200px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.loader-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: var(--gold);
+    animation: loadBar 2s ease-in-out infinite;
+}
+@keyframes loadBar {
+    0% {
+        width: 0;
+        left: 0;
+    }
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq,
+    #map {
+        padding: 4rem 1.5rem;
+    }
+}

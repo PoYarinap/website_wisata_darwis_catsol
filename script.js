@@ -34,12 +34,31 @@ const io = new IntersectionObserver(
 reveals.forEach((el) => io.observe(el))
 
 // Destination tabs
-document.querySelectorAll('.dest-tab').forEach((tab) => {
+// Destination tabs filtering
+const destTabs = document.querySelectorAll('.dest-tab')
+const destCards = document.querySelectorAll('.dest-card')
+
+destTabs.forEach((tab) => {
     tab.addEventListener('click', function () {
-        document
-            .querySelectorAll('.dest-tab')
-            .forEach((t) => t.classList.remove('active'))
+        // Update active tab
+        destTabs.forEach((t) => t.classList.remove('active'))
         this.classList.add('active')
+
+        // Filter cards
+        const filter = this.getAttribute('data-filter')
+
+        destCards.forEach((card) => {
+            const category = card.getAttribute('data-category')
+            if (filter === 'all' || filter === category) {
+                card.style.display = 'block'
+                // Re-trigger reveal animation if needed
+                setTimeout(() => {
+                    card.classList.add('visible')
+                }, 50)
+            } else {
+                card.style.display = 'none'
+            }
+        })
     })
 })
 
@@ -63,7 +82,7 @@ function handleSubmit(e) {
     const message = document.getElementById('waMessage').value || '-'
 
     // Susun format pesan WA
-    const waText = `Halo Admin TOUR Timika, saya ingin berkonsultasi mengenai perjalanan wisata. Berikut data diri saya:%0A%0A*Nama:* ${name}%0A*Email:* ${email}%0A*Telepon:* ${phone}%0A*Destinasi Tujuan:* ${dest}%0A%0A*Pesan Tambahan:*%0A${message}`
+    const waText = `Halo Admin Kolam Elias Mirib, saya ingin berkonsultasi mengenai kunjungan. Berikut data diri saya:%0A%0A*Nama:* ${name}%0A*Email:* ${email}%0A*Telepon:* ${phone}%0A*Destinasi Tujuan:* ${dest}%0A%0A*Pesan Tambahan:*%0A${message}`
 
     // Nomor WA Admin (Ganti dengan nomor aslinya nanti, cth: 6281234567890)
     const adminNumber = '6285387780731'
@@ -115,7 +134,7 @@ document.querySelectorAll('.pkg-btn').forEach((btn) => {
             pkgBody.querySelector('.pkg-name')?.textContent.trim() || ''
 
         // Susun pesan WA
-        const message = `Halo Admin TOUR Timika, saya tertarik untuk memesan paket wisata berikut:%0A%0A*Nama Paket:* ${pkgNameText}%0A*Destinasi:* ${pkgDestText}%0A%0AMohon info lebih detail mengenai jadwal ketersediaan dan proses pemesanannya. Terima kasih.`
+        const message = `Halo Admin Kolam Elias Mirib, saya tertarik untuk memesan paket berikut:%0A%0A*Nama Paket:* ${pkgNameText}%0A*Destinasi:* ${pkgDestText}%0A%0AMohon info lebih detail mengenai jadwal ketersediaan dan proses pemesanannya. Terima kasih.`
 
         const adminNumber = '6285387780731'
         const waLink = `https://wa.me/${adminNumber}?text=${message}`
@@ -249,3 +268,26 @@ if (galleryItems.length > 0 && lightbox) {
         }
     })
 }
+
+// ── FAQ ACCORDION ──
+document.querySelectorAll('.faq-q').forEach((q) => {
+    q.addEventListener('click', () => {
+        const item = q.parentElement
+        item.classList.toggle('active')
+
+        // Close other items
+        document.querySelectorAll('.faq-item').forEach((other) => {
+            if (other !== item) other.classList.remove('active')
+        })
+    })
+})
+
+// ── PRELOADER ──
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader')
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add('fade-out')
+        }, 1500)
+    }
+})

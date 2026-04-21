@@ -4,16 +4,27 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>
-            MANDIRI JAYA — Pondok Pemancingan & Rekreasi Keluarga Timika
+            KOLAM ELIAS MIRIB — Pondok Pemancingan & Rekreasi Keluarga Timika
         </title>
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="favicon.png" type="image/png" />
         <link
             href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
             rel="stylesheet"
         />
     </head>
     <body>
+        <!-- ── PRELOADER ── -->
+        <div id="preloader" class="preloader">
+            <div class="loader-content">
+                <div class="loader-logo">CAT<span>SOL</span></div>
+                <div class="loader-bar">
+                    <div class="loader-progress"></div>
+                </div>
+            </div>
+        </div>
+
         <!-- ── NAVBAR ── -->
         <nav id="navbar">
             <a href="#home" class="nav-logo">MANDIRI<span>JAYA</span></a>
@@ -50,7 +61,7 @@
                 loop
                 playsinline
             >
-                <source src="img/jaya.mp4" type="video/mp4" />
+                <source src="img/wall.mp4" type="video/mp4" />
             </video>
 
             <!-- Audio Control Button -->
@@ -88,8 +99,8 @@
                     Pok.<br /><em>Darwis.</em><br />CATSOL.
                 </h1>
                 <p class="hero-desc">
-                    Nikmati ketenangan memancing di tengah alam asri Kampung
-                    Mandiri Jaya, Timika. Tempat sempurna untuk bersantai
+                    Nikmati ketenangan memancing di tengah alam asri Kolam
+                    Elias Mirib, Timika. Tempat sempurna untuk bersantai
                     bersama keluarga sambil menikmati hasil tangkapan segar.
                 </p>
                 <div class="hero-bottom-row">
@@ -277,62 +288,62 @@
                 <span
                     class="section-tag"
                     style="display: block; text-align: center"
-                    >PILIHAN TERBAIK</span
+                    >EKSPLORASI LOKAL</span
                 >
                 <h2 class="section-title" style="text-align: center">
-                    Destinasi <em>Populer</em>
+                    Destinasi <em>Timika</em>
                 </h2>
                 <p class="section-sub" style="text-align: center">
-                    Temukan keindahan sejati di setiap sudut dunia
+                    Temukan keindahan alam asri di setiap sudut Mimika
                 </p>
             </div>
             <div class="dest-tabs reveal">
-                <button class="dest-tab active">Semua</button>
-                <button class="dest-tab">Eropa</button>
-                <button class="dest-tab">Asia</button>
-                <button class="dest-tab">Amerika</button>
-                <button class="dest-tab">Afrika</button>
+                <button class="dest-tab active" data-filter="all">Semua</button>
+                <button class="dest-tab" data-filter="kota">Kota</button>
+                <button class="dest-tab" data-filter="sungai">Sungai</button>
+                <button class="dest-tab" data-filter="hutan">Hutan</button>
+                <button class="dest-tab" data-filter="pantai">Pantai</button>
             </div>
             <div class="dest-grid reveal">
-                <div class="dest-card">
-                    <img src="images/foto7.jpeg" alt="Italy" />
+                <div class="dest-card" data-category="kota">
+                    <img src="images/foto7.jpeg" alt="Kuala Kencana" />
                     <div class="dest-overlay"></div>
                     <div class="dest-info">
-                        <div class="dest-name">Italy</div>
-                        <div class="dest-meta">45 Aktivitas · 9 Hari</div>
+                        <div class="dest-name">Kuala Kencana</div>
+                        <div class="dest-meta">Kota Modern di Tengah Hutan</div>
                     </div>
                     <div class="dest-badge">TERPOPULER</div>
                 </div>
-                <div class="dest-card">
-                    <img src="images/foto1.jpeg" alt="Greece" />
+                <div class="dest-card" data-category="hutan">
+                    <img src="images/foto1.jpeg" alt="Mangrove Pomako" />
                     <div class="dest-overlay"></div>
                     <div class="dest-info">
-                        <div class="dest-name">Greece</div>
-                        <div class="dest-meta">32 Aktivitas · 7 Hari</div>
+                        <div class="dest-name">Mangrove Pomako</div>
+                        <div class="dest-meta">Ekowisata Hutan Bakau</div>
                     </div>
                 </div>
-                <div class="dest-card">
-                    <img src="images/foto2.jpeg" alt="France" />
+                <div class="dest-card" data-category="sungai">
+                    <img src="images/foto2.jpeg" alt="Kali Iwaka" />
                     <div class="dest-overlay"></div>
                     <div class="dest-info">
-                        <div class="dest-name">France</div>
-                        <div class="dest-meta">60 Aktivitas · 10 Hari</div>
+                        <div class="dest-name">Kali Iwaka</div>
+                        <div class="dest-meta">Ketenangan Arus Sungai</div>
                     </div>
                 </div>
-                <div class="dest-card">
-                    <img src="images/foto5.jpeg" alt="Japan" />
+                <div class="dest-card" data-category="hutan">
+                    <img src="images/foto5.jpeg" alt="Hutan Lorentz" />
                     <div class="dest-overlay"></div>
                     <div class="dest-info">
-                        <div class="dest-name">Japan</div>
-                        <div class="dest-meta">80 Aktivitas · 12 Hari</div>
+                        <div class="dest-name">Hutan Lorentz</div>
+                        <div class="dest-meta">Warisan Dunia UNESCO</div>
                     </div>
                 </div>
-                <div class="dest-card">
-                    <img src="images/foto6.jpeg" alt="Bali" />
+                <div class="dest-card" data-category="pantai">
+                    <img src="images/foto6.jpeg" alt="Pantai Otakwa" />
                     <div class="dest-overlay"></div>
                     <div class="dest-info">
-                        <div class="dest-name">Bali</div>
-                        <div class="dest-meta">55 Aktivitas · 7 Hari</div>
+                        <div class="dest-name">Pantai Otakwa</div>
+                        <div class="dest-meta">Pesona Pasir Putih Mimika</div>
                     </div>
                     <div class="dest-badge">LOKAL</div>
                 </div>
@@ -407,66 +418,156 @@
                     <img src="images/foto9.jpeg" alt="Mountain" />
                     <div class="gallery-item-overlay">
                         <div class="gallery-zoom">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                    </div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line
+                                    x1="21"
+                                    y1="21"
+                                    x2="16.65"
+                                    y2="16.65"
+                                ></line>
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src="images/foto4.jpeg" alt="Beach" />
                     <div class="gallery-item-overlay">
                         <div class="gallery-zoom">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                    </div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line
+                                    x1="21"
+                                    y1="21"
+                                    x2="16.65"
+                                    y2="16.65"
+                                ></line>
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src="images/foto10.jpeg" alt="Forest" />
                     <div class="gallery-item-overlay">
                         <div class="gallery-zoom">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                    </div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line
+                                    x1="21"
+                                    y1="21"
+                                    x2="16.65"
+                                    y2="16.65"
+                                ></line>
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src="images/ikan.jpeg" alt="City" />
                     <div class="gallery-item-overlay">
                         <div class="gallery-zoom">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                    </div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line
+                                    x1="21"
+                                    y1="21"
+                                    x2="16.65"
+                                    y2="16.65"
+                                ></line>
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src="images/card3.jpeg" alt="Italy" />
                     <div class="gallery-item-overlay">
                         <div class="gallery-zoom">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                    </div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line
+                                    x1="21"
+                                    y1="21"
+                                    x2="16.65"
+                                    y2="16.65"
+                                ></line>
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src="images/foto8.jpeg" alt="Desert" />
                     <div class="gallery-item-overlay">
                         <div class="gallery-zoom">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                    </div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line
+                                    x1="21"
+                                    y1="21"
+                                    x2="16.65"
+                                    y2="16.65"
+                                ></line>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -501,13 +602,10 @@
             <div class="pkg-grid reveal">
                 <div class="pkg-card">
                     <div class="pkg-img">
-                        <img
-                            src="img/mancing.png"
-                            alt="Mancing Mania"
-                        />
+                        <img src="img/mancing.png" alt="Mancing Mania" />
                     </div>
                     <div class="pkg-body">
-                        <div class="pkg-dest">🎣 MANDIRI JAYA, TIMIKA</div>
+                        <div class="pkg-dest">🎣 KOLAM ELIAS MIRIB, TIMIKA</div>
                         <div class="pkg-name">Paket Mancing Harian</div>
                         <ul class="pkg-features">
                             <li>Akses kolam utama sepuasnya</li>
@@ -525,15 +623,12 @@
                 </div>
                 <div class="pkg-card popular">
                     <div class="pkg-img">
-                        <img
-                            src="img/gathering.png"
-                            alt="Family Gathering"
-                        />
+                        <img src="img/gathering.png" alt="Family Gathering" />
                         <div class="pkg-popular-badge">PILIHAN KELUARGA</div>
                     </div>
                     <div class="pkg-body">
                         <div class="pkg-dest" style="color: var(--teal)">
-                            🏠 MANDIRI JAYA, TIMIKA
+                            🏠 KOLAM ELIAS MIRIB, TIMIKA
                         </div>
                         <div class="pkg-name">Paket Family Gathering</div>
                         <ul class="pkg-features">
@@ -552,13 +647,10 @@
                 </div>
                 <div class="pkg-card">
                     <div class="pkg-img">
-                        <img
-                            src="img/kuliner.png"
-                            alt="Ikan Bakar"
-                        />
+                        <img src="img/kuliner.png" alt="Ikan Bakar" />
                     </div>
                     <div class="pkg-body">
-                        <div class="pkg-dest">🔥 MANDIRI JAYA, TIMIKA</div>
+                        <div class="pkg-dest">🔥 KOLAM ELIAS MIRIB, TIMIKA</div>
                         <div class="pkg-name">Paket Kuliner & Mancing</div>
                         <ul class="pkg-features">
                             <li>Akses mancing & sewa gazebo</li>
@@ -602,8 +694,8 @@
                 <div class="testi-card">
                     <div class="testi-stars">★★★★★</div>
                     <p class="testi-text">
-                        "Tempat memancing paling nyaman di Timika! Area
-                        pondoknya sangat asri di atas air, anak-anak senang dan
+                        "Kolam Elias Mirib tempatnya sangat nyaman! Area
+                        pondoknya asri di atas air, anak-anak senang dan
                         ikannya juga banyak. Sangat direkomendasikan untuk akhir
                         pekan bersama keluarga."
                     </p>
@@ -616,7 +708,7 @@
                         <div>
                             <div class="testi-name">Sari Dewi</div>
                             <div class="testi-loc">
-                                📍 Jakarta · Paket Italia
+                                📍 Jakarta · Paket Timika
                             </div>
                         </div>
                     </div>
@@ -624,9 +716,9 @@
                 <div class="testi-card">
                     <div class="testi-stars">★★★★★</div>
                     <p class="testi-text">
-                        "Tim TOUR sangat profesional dan ramah. Rekomendasi
-                        destinasi mereka luar biasa akurat sesuai preferensi
-                        kami. Pasti akan kembali lagi!"
+                        "Tim Kolam Elias Mirib sangat profesional dan ramah.
+                        Pelayanannya luar biasa dan sesuai harapan kami.
+                        Pasti akan kembali lagi!"
                     </p>
                     <div class="testi-author">
                         <img
@@ -637,7 +729,7 @@
                         <div>
                             <div class="testi-name">Budi Santoso</div>
                             <div class="testi-loc">
-                                📍 Surabaya · Paket Jepang
+                                📍 Surabaya · Paket Timika
                             </div>
                         </div>
                     </div>
@@ -645,9 +737,9 @@
                 <div class="testi-card">
                     <div class="testi-stars">★★★★★</div>
                     <p class="testi-text">
-                        "Honeymoon kami di Bali menjadi sangat istimewa berkat
-                        sentuhan personal dari TOUR. Semuanya berjalan sempurna
-                        tanpa satu pun kendala."
+                        "Acara keluarga kami di Kolam Elias Mirib sangat
+                        berkesan! Tempatnya indah, ikan segar, dan pelayanan
+                        ramah. Sempurna tanpa kendala."
                     </p>
                     <div class="testi-author">
                         <img
@@ -657,10 +749,88 @@
                         />
                         <div>
                             <div class="testi-name">Rina & Andi</div>
-                            <div class="testi-loc">📍 Bandung · Paket Bali</div>
+                            <div class="testi-loc">
+                                📍 Bandung · Paket Timika
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- ── FAQ SECTION ── -->
+        <section id="faq" class="faq reveal">
+            <div style="text-align: center">
+                <span class="section-tag">TANYA JAWAB</span>
+                <h2 class="section-title">Informasi <em>Penting</em></h2>
+                <p class="section-sub">
+                    Segala hal yang perlu Anda ketahui sebelum berkunjung
+                </p>
+            </div>
+            <div class="faq-wrap">
+                <div class="faq-item">
+                    <div class="faq-q">
+                        Apa saja jenis ikan yang bisa dipancing?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        Kami menyediakan berbagai jenis ikan air tawar seperti
+                        Ikan Nila, Ikan Mas, Patin, dan Bawal yang selalu
+                        terjaga kesegarannya di kolam kami.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">
+                        Apakah boleh membawa alat pancing sendiri?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        Sangat boleh! Pengunjung diperbolehkan membawa peralatan
+                        sendiri. Namun jika tidak membawa, kami juga menyediakan
+                        sewa alat pancing lengkap dengan umpannya.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">
+                        Kapan jam operasional Pondok CATSOL?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        Kami buka setiap hari Senin – Sabtu dari jam 08.00 pagi
+                        hingga 20.00 malam. Khusus hari Minggu, kami melayani
+                        reservasi grup untuk acara keluarga.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">
+                        Apakah bisa langsung memasak hasil pancingan?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        Tentu saja! Kami memiliki layanan pembersihan dan
+                        pemasakan (Ikan Bakar/Goreng) dengan bumbu khas Papua
+                        agar Anda bisa langsung menikmati hasil tangkapan.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── MAP SECTION ── -->
+        <section id="map" class="reveal">
+            <div style="text-align: center; margin-bottom: 3rem">
+                <span class="section-tag">LOKASI KAMI</span>
+                <h2 class="section-title">Temukan <em>Kami</em></h2>
+            </div>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31816.95373724806!2d136.81544780731198!3d-4.572596247966634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x682379bbc2f678f5%3A0x102911f191b2019b!2sKolam%20Elias%20Mirib%20Mandiri%20Jaya!5e0!3m2!1sid!2sid!4v1776761531768!5m2!1sid!2sid"
+                    width="100%"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
             </div>
         </section>
 
@@ -703,7 +873,7 @@
                             </div>
                             <div class="contact-item-text">
                                 <div class="label">ALAMAT</div>
-                                <div class="val">Jl. Mandiri Jaya Timika</div>
+                                <div class="val">Kolam Elias Mirib, Timika</div>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -752,7 +922,7 @@
                             </div>
                             <div class="contact-item-text">
                                 <div class="label">EMAIL</div>
-                                <div class="val">mandirijaya@gmail.com</div>
+                                <div class="val">kolamelias.mirib@gmail.com</div>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -817,11 +987,11 @@
                             <label>DESTINASI TUJUAN</label>
                             <select id="waDest">
                                 <option value="">Pilih Destinasi</option>
-                                <option>Bali, Indonesia</option>
-                                <option>Roma, Italia</option>
-                                <option>Tokyo, Jepang</option>
-                                <option>Paris, Prancis</option>
-                                <option>Santorini, Yunani</option>
+                                <option>Kuala Kencana</option>
+                                <option>Mangrove Pomako</option>
+                                <option>Kali Iwaka</option>
+                                <option>Hutan Lorentz</option>
+                                <option>Pantai Otakwa</option>
                             </select>
                         </div>
                     </div>
@@ -848,9 +1018,9 @@
                         >MANDIRI<span>JAYA</span></a
                     >
                     <p>
-                        Destinasi wisata pemancingan dan rekreasi keluarga
-                        terbaik di Timika. Nikmati momen santai di tengah alam
-                        asri Papua bersama kami.
+                        Kolam Elias Mirib — destinasi wisata pemancingan dan
+                        rekreasi keluarga terbaik di Timika. Nikmati momen
+                        santai di tengah alam asri Papua bersama kami.
                     </p>
                     <div class="footer-socials">
                         <!-- Facebook -->
@@ -963,7 +1133,7 @@
                     <ul>
                         <li><a href="#">Timika, Papua</a></li>
                         <li><a href="#">Kuala Kencana</a></li>
-                        <li><a href="#">Kampung Mandiri Jaya</a></li>
+                        <li><a href="#">Mandiri Jaya</a></li>
                         <li><a href="#">Kabupaten Mimika</a></li>
                         <li><a href="#">Papua Tengah</a></li>
                     </ul>
@@ -980,7 +1150,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© 2025 MANDIRI JAYA. Seluruh hak dilindungi.</span>
+                <span>© 2025 KOLAM ELIAS MIRIB. Seluruh hak dilindungi.</span>
                 <span style="display: flex; gap: 1.5rem">
                     <a
                         href="#"
