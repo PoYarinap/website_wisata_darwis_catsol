@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            MANDIRI JAYA — Pondok Pemancingan & Rekreasi Keluarga Timika
+        </title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- ── NAVBAR ── -->
+        <nav id="navbar">
+            <a href="#home" class="nav-logo">MANDIRI<span>JAYA</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#destinasi">Destinasi</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+            <button class="nav-cta">Pesan Sekarang</button>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="mobile-close" id="mobileClose">✕</button>
+            <a href="#home" onclick="closeMobile()">Home</a>
+            <a href="#tentang" onclick="closeMobile()">Tentang</a>
+            <a href="#destinasi" onclick="closeMobile()">Destinasi</a>
+            <a href="#galeri" onclick="closeMobile()">Galeri</a>
+            <a href="#kontak" onclick="closeMobile()">Kontak</a>
+        </div>
+
+        <!-- ── HERO ── -->
+        <section id="home">
+            <video
+                id="heroVideo"
+                class="hero-video"
+                autoplay
+                muted
+                loop
+                playsinline
+            >
+                <source src="img/jaya.mp4" type="video/mp4" />
+            </video>
+
+            <!-- Audio Control Button -->
+            <button
+                id="audioToggle"
+                class="audio-toggle-btn"
+                title="Aktifkan Suara"
+            >
+                <svg
+                    id="audioIcon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+                    <line x1="23" y1="9" x2="17" y2="15"></line>
+                    <line x1="17" y1="9" x2="23" y2="15"></line>
+                </svg>
+            </button>
+
+            <div class="hero-overlay"></div>
+            <div class="hero-particles"></div>
+
+            <div class="hero-content">
+                <div class="hero-badge">
+                    Destinasi Rekreasi Keluarga Terbaik
+                </div>
+                <h1 class="hero-title">
+                    Pondok<br /><em>Pemancingan.</em><br />MANDIRI JAYA.
+                </h1>
+                <p class="hero-desc">
+                    Nikmati ketenangan memancing di tengah alam asri Kampung
+                    Mandiri Jaya, Timika. Tempat sempurna untuk bersantai
+                    bersama keluarga sambil menikmati hasil tangkapan segar.
+                </p>
+                <div class="hero-bottom-row">
+                    <div class="hero-btns">
+                        <a href="#destinasi" class="btn-primary"
+                            >Lihat Paket Mancing</a
+                        >
+                        <a href="#tentang" class="btn-outline">Tentang Kami</a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="hero-stat-num">4</div>
+                            <div class="hero-stat-label">PONDOK UTAMA</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-num">100%</div>
+                            <div class="hero-stat-label">ALAM ASRI</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-num">24/7</div>
+                            <div class="hero-stat-label">LAYANAN RAMAH</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating destination cards -->
+            <div class="hero-cards">
+                <div class="hero-card">
+                    <img src="img/card1.jpeg" alt="Italy" />
+                </div>
+                <div class="hero-card">
+                    <img src="img/card2.jpeg" alt="Greece" />
+                </div>
+                <div class="hero-card">
+                    <img src="img/card3.jpeg" alt="Japan" />
+                </div>
+            </div>
+        </section>
+
+        <!-- ── BRANDS ── -->
+        <div class="brands">
+            <span class="brands-label">DIPERCAYA OLEH</span>
+            <div class="brands-list">
+                <span class="brand-item">Garuda</span>
+                <span class="brand-item">Booking.com</span>
+                <span class="brand-item">Expedia</span>
+                <span class="brand-item">Traveloka</span>
+                <span class="brand-item">Tripadvisor</span>
+                <span class="brand-item">Airbnb</span>
+            </div>
+        </div>
+
+        <!-- ── FEATURES ── -->
+        <section style="background: var(--cream); padding: 5rem 0 0">
+            <div
+                style="
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 0 4rem;
+                    text-align: center;
+                "
+                class="reveal"
+            >
+                <span class="section-tag">LAYANAN KAMI</span>
+                <h2 class="section-title">Semua yang Anda <em>Butuhkan</em></h2>
+                <p class="section-sub">
+                    Layanan lengkap untuk perjalanan impian Anda
+                </p>
+            </div>
+            <div class="features">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <!-- Ikon Ikan/Pancing -->
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="28"
+                            height="28"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M2 16c.5 0 1 1 2 2.5s2 2.5 4 2.5c2.5 0 4.5-1.5 6-4 1.5 2.5 3.5 4 6 4 2 0 3-1 4-2.5S23.5 16 24 16"
+                            ></path>
+                            <path
+                                d="M11 12c.5-1.5 1.5-2.5 3-2.5s2.5 1 3 2.5"
+                            ></path>
+                            <circle cx="18" cy="9" r="2"></circle>
+                        </svg>
+                    </div>
+                    <div class="feature-title">Area Pemancingan</div>
+                    <p class="feature-desc">
+                        Nikmati sensasi memancing di kolam yang luas dengan
+                        berbagai jenis ikan tawar segar. Cocok untuk pemula
+                        maupun pemancing berpengalaman.
+                    </p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay: 0.1s">
+                    <div class="feature-icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="28"
+                            height="28"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <rect
+                                x="4"
+                                y="2"
+                                width="16"
+                                height="20"
+                                rx="2"
+                                ry="2"
+                            ></rect>
+                            <path d="M9 22v-4h6v4"></path>
+                            <path d="M8 6h.01"></path>
+                            <path d="M16 6h.01"></path>
+                            <path d="M12 6h.01"></path>
+                            <path d="M12 10h.01"></path>
+                            <path d="M12 14h.01"></path>
+                            <path d="M16 10h.01"></path>
+                            <path d="M16 14h.01"></path>
+                            <path d="M8 10h.01"></path>
+                            <path d="M8 14h.01"></path>
+                        </svg>
+                    </div>
+                    <div class="feature-title">Reservasi Hotel</div>
+                    <p class="feature-desc">
+                        Temukan akomodasi terbaik dari budget hingga mewah di
+                        seluruh destinasi dengan harga terjangkau dan fasilitas
+                        premium.
+                    </p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay: 0.2s">
+                    <div class="feature-icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="28"
+                            height="28"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.64 5H8.4a2 2 0 0 0-1.9 1.3L5 10 3 8"
+                            ></path>
+                            <path d="M7 14h.01"></path>
+                            <path d="M17 14h.01"></path>
+                            <rect
+                                width="18"
+                                height="8"
+                                x="3"
+                                y="10"
+                                rx="2"
+                            ></rect>
+                            <path d="M5 18v2"></path>
+                            <path d="M19 18v2"></path>
+                        </svg>
+                    </div>
+                    <div class="feature-title">Rental Kendaraan</div>
+                    <p class="feature-desc">
+                        Armada kendaraan modern dan nyaman tersedia 24/7 untuk
+                        memastikan mobilitas Anda selama perjalanan tetap
+                        lancar.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── DESTINATIONS ── -->
+        <section id="destinasi">
+            <div class="reveal">
+                <span
+                    class="section-tag"
+                    style="display: block; text-align: center"
+                    >PILIHAN TERBAIK</span
+                >
+                <h2 class="section-title" style="text-align: center">
+                    Destinasi <em>Populer</em>
+                </h2>
+                <p class="section-sub" style="text-align: center">
+                    Temukan keindahan sejati di setiap sudut dunia
+                </p>
+            </div>
+            <div class="dest-tabs reveal">
+                <button class="dest-tab active">Semua</button>
+                <button class="dest-tab">Eropa</button>
+                <button class="dest-tab">Asia</button>
+                <button class="dest-tab">Amerika</button>
+                <button class="dest-tab">Afrika</button>
+            </div>
+            <div class="dest-grid reveal">
+                <div class="dest-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=900&q=80"
+                        alt="Italy"
+                    />
+                    <div class="dest-overlay"></div>
+                    <div class="dest-info">
+                        <div class="dest-name">Italy</div>
+                        <div class="dest-meta">45 Aktivitas · 9 Hari</div>
+                    </div>
+                    <div class="dest-badge">TERPOPULER</div>
+                </div>
+                <div class="dest-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600&q=80"
+                        alt="Greece"
+                    />
+                    <div class="dest-overlay"></div>
+                    <div class="dest-info">
+                        <div class="dest-name">Greece</div>
+                        <div class="dest-meta">32 Aktivitas · 7 Hari</div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1503152394-c571994fd383?w=600&q=80"
+                        alt="France"
+                    />
+                    <div class="dest-overlay"></div>
+                    <div class="dest-info">
+                        <div class="dest-name">France</div>
+                        <div class="dest-meta">60 Aktivitas · 10 Hari</div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80"
+                        alt="Japan"
+                    />
+                    <div class="dest-overlay"></div>
+                    <div class="dest-info">
+                        <div class="dest-name">Japan</div>
+                        <div class="dest-meta">80 Aktivitas · 12 Hari</div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1526392060635-9d6019884377?w=600&q=80"
+                        alt="Bali"
+                    />
+                    <div class="dest-overlay"></div>
+                    <div class="dest-info">
+                        <div class="dest-name">Bali</div>
+                        <div class="dest-meta">55 Aktivitas · 7 Hari</div>
+                    </div>
+                    <div class="dest-badge">LOKAL</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── PROCESS / TENTANG ── -->
+        <section id="tentang">
+            <div class="reveal">
+                <span
+                    class="section-tag"
+                    style="display: block; text-align: center"
+                    >CARA KERJA</span
+                >
+                <h2 class="section-title" style="text-align: center">
+                    Proses yang <em>Mudah</em>
+                </h2>
+                <p class="section-sub" style="text-align: center">
+                    Cara cepat dan mudah untuk memulai perjalanan impian Anda
+                </p>
+            </div>
+            <div class="process-wrap reveal" style="margin-top: 3rem">
+                <div class="process-line"></div>
+                <div class="process-step pstep">
+                    <div class="process-num">1</div>
+                    <div class="process-name">Pilih Destinasi</div>
+                    <p class="process-desc">
+                        Telusuri ratusan destinasi impian kami dan temukan yang
+                        paling sesuai dengan keinginan Anda.
+                    </p>
+                </div>
+                <div class="process-step pstep">
+                    <div class="process-num">2</div>
+                    <div class="process-name">Pilih Paket</div>
+                    <p class="process-desc">
+                        Pilih paket wisata yang paling cocok dengan anggaran dan
+                        preferensi perjalanan Anda.
+                    </p>
+                </div>
+                <div class="process-step pstep">
+                    <div class="process-num">3</div>
+                    <div class="process-name">Nikmati Perjalanan</div>
+                    <p class="process-desc">
+                        Percayakan semua detail kepada kami dan nikmati setiap
+                        momen perjalanan Anda.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── GALLERY ── -->
+        <section id="galeri">
+            <div class="reveal">
+                <span
+                    class="section-tag"
+                    style="
+                        display: block;
+                        text-align: center;
+                        color: var(--gold);
+                    "
+                    >MOMEN INDAH</span
+                >
+                <h2 class="section-title" style="text-align: center">
+                    Galeri <em style="color: var(--gold-light)">Perjalanan</em>
+                </h2>
+                <p class="section-sub" style="text-align: center">
+                    Setiap gambar menceritakan sebuah petualangan
+                </p>
+            </div>
+            <div class="gallery-grid reveal" style="margin-top: 2.5rem">
+                <div class="gallery-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80"
+                        alt="Mountain"
+                    />
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-zoom">🔍</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1499363536502-87642509e31b?w=500&q=80"
+                        alt="Beach"
+                    />
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-zoom">🔍</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=500&q=80"
+                        alt="Forest"
+                    />
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-zoom">🔍</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=500&q=80"
+                        alt="City"
+                    />
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-zoom">🔍</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=900&q=80"
+                        alt="Italy"
+                    />
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-zoom">🔍</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1444927714506-8492d94b4e3d?w=500&q=80"
+                        alt="Desert"
+                    />
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-zoom">🔍</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── PACKAGES ── -->
+        <section class="packages">
+            <div class="reveal">
+                <span
+                    class="section-tag"
+                    style="display: block; text-align: center"
+                    >PILIHAN LAYANAN</span
+                >
+                <h2 class="section-title" style="text-align: center">
+                    Paket <em>Mancing</em> & Rekreasi
+                </h2>
+                <p class="section-sub" style="text-align: center">
+                    Nikmati waktu berkualitas dengan harga yang terjangkau
+                </p>
+            </div>
+            <div class="pkg-tabs reveal" style="margin-top: 2rem">
+                <button class="pkg-tab active" onclick="setPkgTab(this)">
+                    Semua
+                </button>
+                <button class="pkg-tab" onclick="setPkgTab(this)">
+                    Terlaris
+                </button>
+                <button class="pkg-tab" onclick="setPkgTab(this)">
+                    Terbaik
+                </button>
+            </div>
+            <div class="pkg-grid reveal">
+                <div class="pkg-card">
+                    <div class="pkg-img">
+                        <img
+                            src="https://images.unsplash.com/photo-1544239649-433836846761?w=600&q=80"
+                            alt="Mancing Mania"
+                        />
+                    </div>
+                    <div class="pkg-body">
+                        <div class="pkg-dest">🎣 MANDIRI JAYA, TIMIKA</div>
+                        <div class="pkg-name">Paket Mancing Harian</div>
+                        <ul class="pkg-features">
+                            <li>Akses kolam utama sepuasnya</li>
+                            <li>Parkir kendaraan gratis</li>
+                            <li>Area pondok istirahat bersama</li>
+                            <li>Timbang hasil pancing (per kg)</li>
+                        </ul>
+                        <div class="pkg-footer">
+                            <div class="pkg-price">
+                                Rp 50rb <span>/ hari</span>
+                            </div>
+                            <button class="pkg-btn">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pkg-card popular">
+                    <div class="pkg-img">
+                        <img
+                            src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600&q=80"
+                            alt="Family Gathering"
+                        />
+                        <div class="pkg-popular-badge">PILIHAN KELUARGA</div>
+                    </div>
+                    <div class="pkg-body">
+                        <div class="pkg-dest" style="color: var(--teal)">
+                            🏠 MANDIRI JAYA, TIMIKA
+                        </div>
+                        <div class="pkg-name">Paket Family Gathering</div>
+                        <ul class="pkg-features">
+                            <li>Sewa Gazebo Eksklusif (1 hari)</li>
+                            <li>Sewa 2 alat pancing lengkap</li>
+                            <li>Paket makan siang keluarga (5 org)</li>
+                            <li>Welcome drink & snacks</li>
+                        </ul>
+                        <div class="pkg-footer">
+                            <div class="pkg-price">
+                                Rp 500rb <span>/ paket</span>
+                            </div>
+                            <button class="pkg-btn">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pkg-card">
+                    <div class="pkg-img">
+                        <img
+                            src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=600&q=80"
+                            alt="Ikan Bakar"
+                        />
+                    </div>
+                    <div class="pkg-body">
+                        <div class="pkg-dest">🔥 MANDIRI JAYA, TIMIKA</div>
+                        <div class="pkg-name">Paket Kuliner & Mancing</div>
+                        <ul class="pkg-features">
+                            <li>Akses mancing & sewa gazebo</li>
+                            <li>Olah hasil pancing langsung</li>
+                            <li>Bumbu bakar khas Papua</li>
+                            <li>Nasi & Sambal Lalapan lengkap</li>
+                        </ul>
+                        <div class="pkg-footer">
+                            <div class="pkg-price">
+                                Rp 250rb <span>/ paket</span>
+                            </div>
+                            <button class="pkg-btn">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── TESTIMONIALS ── -->
+        <section class="testimonials">
+            <div class="reveal">
+                <span
+                    class="section-tag"
+                    style="
+                        display: block;
+                        text-align: center;
+                        color: var(--gold);
+                    "
+                    >KATA MEREKA</span
+                >
+                <h2 class="section-title" style="text-align: center">
+                    Apa Kata
+                    <em style="color: var(--gold-light)">Pengunjung</em>
+                </h2>
+                <p class="section-sub" style="text-align: center">
+                    Kesan nyata dari keluarga yang telah berkunjung ke Mandiri
+                    Jaya
+                </p>
+            </div>
+            <div class="testi-grid reveal" style="margin-top: 3rem">
+                <div class="testi-card">
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">
+                        "Tempat memancing paling nyaman di Timika! Area
+                        pondoknya sangat asri di atas air, anak-anak senang dan
+                        ikannya juga banyak. Sangat direkomendasikan untuk akhir
+                        pekan bersama keluarga."
+                    </p>
+                    <div class="testi-author">
+                        <img
+                            class="testi-avatar"
+                            src="https://randomuser.me/api/portraits/women/45.jpg"
+                            alt="Sari"
+                        />
+                        <div>
+                            <div class="testi-name">Sari Dewi</div>
+                            <div class="testi-loc">
+                                📍 Jakarta · Paket Italia
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">
+                        "Tim TOUR sangat profesional dan ramah. Rekomendasi
+                        destinasi mereka luar biasa akurat sesuai preferensi
+                        kami. Pasti akan kembali lagi!"
+                    </p>
+                    <div class="testi-author">
+                        <img
+                            class="testi-avatar"
+                            src="https://randomuser.me/api/portraits/men/32.jpg"
+                            alt="Budi"
+                        />
+                        <div>
+                            <div class="testi-name">Budi Santoso</div>
+                            <div class="testi-loc">
+                                📍 Surabaya · Paket Jepang
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">
+                        "Honeymoon kami di Bali menjadi sangat istimewa berkat
+                        sentuhan personal dari TOUR. Semuanya berjalan sempurna
+                        tanpa satu pun kendala."
+                    </p>
+                    <div class="testi-author">
+                        <img
+                            class="testi-avatar"
+                            src="https://randomuser.me/api/portraits/women/68.jpg"
+                            alt="Rina"
+                        />
+                        <div>
+                            <div class="testi-name">Rina & Andi</div>
+                            <div class="testi-loc">📍 Bandung · Paket Bali</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── CONTACT ── -->
+        <section id="kontak">
+            <div class="reveal" style="text-align: center">
+                <span class="section-tag">HUBUNGI KAMI</span>
+                <h2 class="section-title">Mulai <em>Perjalanan</em> Anda</h2>
+                <p class="section-sub">
+                    Tim kami siap membantu mewujudkan liburan impian Anda
+                </p>
+            </div>
+            <div class="contact-wrap reveal" style="margin-top: 3.5rem">
+                <div class="contact-info">
+                    <h3>Kami Siap<br />Membantu Anda</h3>
+                    <p>
+                        Konsultasikan rencana perjalanan Anda dengan tim
+                        profesional kami. Kami akan membantu merancang itinerary
+                        terbaik sesuai kebutuhan dan anggaran Anda.
+                    </p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                                    ></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <div class="label">ALAMAT</div>
+                                <div class="val">Jl. Mandiri Jaya Timika</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <div class="label">TELEPON</div>
+                                <div class="val">+62 853 8778 0731</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                    ></path>
+                                    <polyline
+                                        points="22,6 12,13 2,6"
+                                    ></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <div class="label">EMAIL</div>
+                                <div class="val">mandirijaya@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline
+                                        points="12 6 12 12 16 14"
+                                    ></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <div class="label">JAM OPERASIONAL</div>
+                                <div class="val">
+                                    Senin – Sabtu, 08.00 – 20.00 WIB
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>NAMA LENGKAP</label>
+                            <input
+                                type="text"
+                                id="waName"
+                                placeholder="John Doe"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label>EMAIL</label>
+                            <input
+                                type="email"
+                                id="waEmail"
+                                placeholder="Johndoe@gamil.com"
+                            />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>TELEPON</label>
+                            <input
+                                type="tel"
+                                id="waPhone"
+                                placeholder="+62 8xx xxxx xxxx"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label>DESTINASI TUJUAN</label>
+                            <select id="waDest">
+                                <option value="">Pilih Destinasi</option>
+                                <option>Bali, Indonesia</option>
+                                <option>Roma, Italia</option>
+                                <option>Tokyo, Jepang</option>
+                                <option>Paris, Prancis</option>
+                                <option>Santorini, Yunani</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>PESAN</label>
+                        <textarea
+                            id="waMessage"
+                            placeholder="Ceritakan perjalanan impian Anda..."
+                            required
+                        ></textarea>
+                    </div>
+                    <button class="form-submit" onclick="handleSubmit(event)">
+                        KIRIM PESAN →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── FOOTER ── -->
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-logo"
+                        >MANDIRI<span>JAYA</span></a
+                    >
+                    <p>
+                        Destinasi wisata pemancingan dan rekreasi keluarga
+                        terbaik di Timika. Nikmati momen santai di tengah alam
+                        asri Papua bersama kami.
+                    </p>
+                    <div class="footer-socials">
+                        <!-- Facebook -->
+                        <a class="footer-social" href="#" aria-label="Facebook">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                                ></path>
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a
+                            class="footer-social"
+                            href="#"
+                            aria-label="Instagram"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect
+                                    x="2"
+                                    y="2"
+                                    width="20"
+                                    height="20"
+                                    rx="5"
+                                    ry="5"
+                                ></rect>
+                                <path
+                                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                                ></path>
+                                <line
+                                    x1="17.5"
+                                    y1="6.5"
+                                    x2="17.51"
+                                    y2="6.5"
+                                ></line>
+                            </svg>
+                        </a>
+                        <!-- TikTok -->
+                        <a class="footer-social" href="#" aria-label="TikTok">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"
+                                ></path>
+                            </svg>
+                        </a>
+                        <!-- YouTube -->
+                        <a class="footer-social" href="#" aria-label="YouTube">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+                                ></path>
+                                <polygon
+                                    points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+                                ></polygon>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>NAVIGASI</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#tentang">Tentang Kami</a></li>
+                        <li><a href="#destinasi">Destinasi</a></li>
+                        <li><a href="#galeri">Galeri</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>DESTINASI</h4>
+                    <ul>
+                        <li><a href="#">Timika, Papua</a></li>
+                        <li><a href="#">Kuala Kencana</a></li>
+                        <li><a href="#">Kampung Mandiri Jaya</a></li>
+                        <li><a href="#">Kabupaten Mimika</a></li>
+                        <li><a href="#">Papua Tengah</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>LAYANAN</h4>
+                    <ul>
+                        <li><a href="#">Area Pemancingan</a></li>
+                        <li><a href="#">Sewa Gazebo</a></li>
+                        <li><a href="#">Sewa Alat Pancing</a></li>
+                        <li><a href="#">Paket Gathering</a></li>
+                        <li><a href="#">Kuliner Ikan Bakar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 MANDIRI JAYA. Seluruh hak dilindungi.</span>
+                <span style="display: flex; gap: 1.5rem">
+                    <a
+                        href="#"
+                        style="
+                            color: rgba(255, 255, 255, 0.4);
+                            text-decoration: none;
+                        "
+                        >Kebijakan Privasi</a
+                    >
+                    <a
+                        href="#"
+                        style="
+                            color: rgba(255, 255, 255, 0.4);
+                            text-decoration: none;
+                        "
+                        >Syarat & Ketentuan</a
+                    >
+                </span>
+            </div>
+        </footer>
+
+        <!-- Scroll to top -->
+        <button
+            class="scroll-top"
+            id="scrollTop"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        >
+            ↑
+        </button>
+
+        <script src="script.js"></script>
+    </body>
+</html>
