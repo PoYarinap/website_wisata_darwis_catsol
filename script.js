@@ -203,3 +203,49 @@ if (heroVideo && audioToggle) {
         }
     })
 }
+
+// ── GALLERY LIGHTBOX LOGIC ──
+const galleryItems = document.querySelectorAll('.gallery-item')
+const lightbox = document.getElementById('lightbox')
+const lightboxImg = document.getElementById('lightboxImg')
+const lightboxClose = document.querySelector('.lightbox-close')
+
+if (galleryItems.length > 0 && lightbox) {
+    galleryItems.forEach((item) => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img')
+            if (img) {
+                // Set source and open lightbox
+                lightboxImg.src = img.src
+                lightbox.classList.add('open')
+                // Prevent body scroll
+                document.body.style.overflow = 'hidden'
+            }
+        })
+    })
+
+    // Close function
+    const closeLightbox = () => {
+        lightbox.classList.remove('open')
+        document.body.style.overflow = ''
+        // Reset src after transition for better behavior
+        setTimeout(() => {
+            lightboxImg.src = ''
+        }, 400)
+    }
+
+    // Close on button click
+    lightboxClose.addEventListener('click', closeLightbox)
+
+    // Close on background click
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox()
+    })
+
+    // Close on Escape key
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+            closeLightbox()
+        }
+    })
+}
